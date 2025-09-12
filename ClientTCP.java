@@ -1,3 +1,5 @@
+
+// TbSNyGJG - TCP - Character Stream
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
@@ -5,10 +7,10 @@ import java.util.List;
 
 public class ClientTCP {
     public static void main(String[] args) {
-        String host = "203.162.10.109";       // hoặc thay bằng IP server thật
+        String host = "203.162.10.109"; // hoặc thay bằng IP server thật
         int port = 2208;
         String studentCode = "B22DCVT445";
-        String qCode = "TbSNyGJG";       // Mã câu hỏi trong đề
+        String qCode = "TbSNyGJG"; // Mã câu hỏi trong đề
 
         try (Socket socket = new Socket()) {
             // (0) Kết nối tới server với timeout 5 giây
