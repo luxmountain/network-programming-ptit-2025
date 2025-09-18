@@ -5,7 +5,7 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientTCP {
+public class TbSNyGJG {
     public static void main(String[] args) {
         String host = "203.162.10.109"; // hoặc thay bằng IP server thật
         int port = 2208;
@@ -27,11 +27,11 @@ public class ClientTCP {
             writer.write(msg);
             writer.newLine(); // kết thúc dòng để server đọc được
             writer.flush();
-            System.out.println("Đã gửi: " + msg);
+            System.out.println("Sent: " + msg);
 
             // (b) Nhận danh sách tên miền từ server
             String domainsLine = reader.readLine();
-            System.out.println("Nhận được: " + domainsLine);
+            System.out.println("Received: " + domainsLine);
 
             // (c) Lọc ra các tên miền .edu
             String[] domains = domainsLine.split(",");
@@ -48,13 +48,13 @@ public class ClientTCP {
             writer.write(result);
             writer.newLine();
             writer.flush();
-            System.out.println("Đã gửi lại tên miền .edu: " + result);
+            System.out.println("Sent .edu domains: " + result);
 
             // (d) Đóng kết nối
             writer.close();
             reader.close();
             socket.close();
-            System.out.println("Kết thúc chương trình.");
+            System.out.println("Program finished.");
 
         } catch (IOException e) {
             e.printStackTrace();
