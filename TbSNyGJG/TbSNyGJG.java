@@ -1,3 +1,4 @@
+package TbSNyGJG;
 
 // TbSNyGJG - TCP - Character Stream
 import java.io.*;
