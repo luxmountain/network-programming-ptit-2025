@@ -1,5 +1,3 @@
-package TbSNyGJG;
-
 // TbSNyGJG - TCP - Character Stream
 import java.io.*;
 import java.net.*;
@@ -23,7 +21,7 @@ public class TbSNyGJG {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(socket.getInputStream()));
 
-            // (a) Gửi chuỗi "studentCode;qCode"
+        // (a) Gửi chuỗi "studentCode;qCode"
             String msg = studentCode + ";" + qCode;
             writer.write(msg);
             writer.newLine(); // kết thúc dòng để server đọc được
