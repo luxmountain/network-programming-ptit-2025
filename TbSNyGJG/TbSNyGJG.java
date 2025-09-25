@@ -22,7 +22,7 @@ public class TbSNyGJG {
                     new InputStreamReader(socket.getInputStream()));
 
         // (a) Gửi chuỗi "studentCode;qCode"
-            String msg = studentCode + ";" + qCode;
+            String msg = studentCode + ";" + qCode; 
             writer.write(msg);
             writer.newLine(); // kết thúc dòng để server đọc được
             writer.flush();
